@@ -130,3 +130,7 @@ h1 {
     box-shadow: -1px 7px 22px -6px lightgrey;
     cursor: pointer;
 }
+
+.restart-btn:hover {
+    color: grey;
+}
