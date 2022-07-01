@@ -87,70 +87,72 @@ const PlayGame = (player1, player2, gameBoard) => {
 
     // Game logic
     const hasWinner = (currentPlayer) => {
+
+        const winner = (currentPlayer === p1) ? p2 : p1;
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[1].textContent === 'X' && board.getGameBoard()[2].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[3].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[5].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[6].textContent === 'X' && board.getGameBoard()[7].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[3].textContent === 'X' && board.getGameBoard()[6].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[1].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[7].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[2].textContent === 'X' && board.getGameBoard()[5].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[2].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[6].textContent === 'X') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
 
         // player 2
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[1].textContent === 'O' && board.getGameBoard()[2].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[3].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[5].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[6].textContent === 'O' && board.getGameBoard()[7].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[3].textContent === 'O' && board.getGameBoard()[6].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[1].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[7].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[2].textContent === 'O' && board.getGameBoard()[5].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
         if(board.getGameBoard()[2].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[6].textContent === 'O') {
-            console.log(`${currentPlayer.getName()} WINS!`);
+            console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
         };
     }
