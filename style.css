@@ -134,3 +134,34 @@ h1 {
 .restart-btn:hover {
     color: grey;
 }
+
+.endgame-display {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.endgame-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.endgame-message p{
+    text-align: center;
+    line-height: 600px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}

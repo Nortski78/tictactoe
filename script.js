@@ -47,6 +47,8 @@ const PlayGame = (player1, player2, gameBoard) => {
     const iconO = document.querySelector('#o-icon');
     const gameBoardBtns = document.querySelectorAll('.board-square');
     const restartBtn = document.querySelector('.restart-btn');
+    const endGame = document.querySelector('.endgame-display');
+    const endGameMessage = document.querySelector('.endgame-message p');
 
     // Bind events
     iconX.addEventListener('click', () => {
@@ -54,6 +56,7 @@ const PlayGame = (player1, player2, gameBoard) => {
         p2.setIcon('O');
         console.log(`Player 1 is ${p1.getIcon()}`);
         console.log(`Player 2 is ${p2.getIcon()}`);
+        console.log('SUP');
         iconX.classList.toggle('selected');
         if(iconO.classList.contains('selected')){
             iconO.classList.toggle('selected');
@@ -85,6 +88,10 @@ const PlayGame = (player1, player2, gameBoard) => {
 
     restartBtn.addEventListener('click', resetGameBoard);
 
+    endGame.addEventListener('click', () => {
+        endGame.classList.toggle('hidden');
+    })
+
     // Game logic
     const hasWinner = (currentPlayer) => {
 
@@ -92,68 +99,84 @@ const PlayGame = (player1, player2, gameBoard) => {
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[1].textContent === 'X' && board.getGameBoard()[2].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());           
         };
         if(board.getGameBoard()[3].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[5].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[6].textContent === 'X' && board.getGameBoard()[7].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[3].textContent === 'X' && board.getGameBoard()[6].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[1].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[7].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[2].textContent === 'X' && board.getGameBoard()[5].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[0].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[8].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[2].textContent === 'X' && board.getGameBoard()[4].textContent === 'X' && board.getGameBoard()[6].textContent === 'X') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
 
         // player 2
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[1].textContent === 'O' && board.getGameBoard()[2].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[3].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[5].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[6].textContent === 'O' && board.getGameBoard()[7].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[3].textContent === 'O' && board.getGameBoard()[6].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[1].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[7].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[2].textContent === 'O' && board.getGameBoard()[5].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[0].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[8].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
         if(board.getGameBoard()[2].textContent === 'O' && board.getGameBoard()[4].textContent === 'O' && board.getGameBoard()[6].textContent === 'O') {
             console.log(`${winner.getName()} WINS!`);
             disableGameBoard();
+            displayEndgame(winner.getName());
         };
     }
 
@@ -176,6 +199,11 @@ const PlayGame = (player1, player2, gameBoard) => {
             iconO.disabled = false;
             enableGameBoard();           
         }); 
+    }
+
+    const displayEndgame = (winner) => {
+        endGameMessage.textContent = `${winner} wins!`;
+        endGame.classList.toggle('hidden'); 
     }
 }
 
